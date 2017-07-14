@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Cantarell');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+  .blurBack {
+    opacity: 0;
+    position: absolute;
+    background-color: hsla(0,0%,100%,.3);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+  .mainMenu {
+    background: hsla(0,0%,100%,.3);
+    z-index: -1;
+  }
+  .video {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    overflow: hidden;
+    z-index: -100;
+  }
+  .fullscreen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    z-index: -100;
+  }
+  section div{
+    width: 100%;
+    height: auto;
+  }
+  nav {
+    width: 100%;
+    height: 62px;
+    margin-top: 45px;
+    padding-top: 0;
+  }
+  .navigation {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  .menu {
+    margin: 5px 15px 5px 15px;
+    padding: 5px 15px 5px 15px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  .selected {
+    background: linear-gradient(135deg, #ffffff 20%, #ffffff 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    margin: 10px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+  }
+  .menu a:hover {
+    background: linear-gradient(135deg, #ffffff 20%, #ffffff 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  section {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .content {
+    font-family: 'Cantarell', sans-serif;
+    overflow-y: auto;
+    opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .aboutText {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    position: relative;
+    width: 100%;
+  }
+  .aboutText p {
+    font-family: 'Inconsolata', monospace;
+    margin: 0 10px;
+    padding: 0 15px;
+    text-align: justify;
+    text-indent: 50px;
+    height: auto;
+  }
+  .sea {
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    bottom: 0;
+    right: 0;
+  }
+
+   .line {
+    margin-bottom: 15px;
+    margin-top: -30px;
+    height: 1px;
+    width: 600px;
+    background-color: #CF4647;
+    display: flex;
+    align-self: center;
+  }
+
+  .wrapperContact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header {
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .header p {
+    text-align: center;
+    font-size: 0.6em;
+    margin-bottom: 40px;
+  }
+  .header h1 {
+    text-align: center;
+    margin: 0;
+    margin-top: 30px;
+  }
+  .contactForm {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  #form {
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 500px;
+    margin: 0;
+  }
+  input {
+    font-family: 'Cantarell', sans-serif;
+    font-size: 0.875em;
+    width: 470px;
+    height: 50px;
+    margin: 10px;
+    padding: 0px 15px;
+    background: transparent;
+    outline: none;
+    color: #000000;
+    border: solid 1px #000000;
+    transition: all 0.5s;
+  }
+  textarea {
+    width: 470px;
+    max-width: 470px;
+    height: 110px;
+    max-height: 110px;
+    margin: 10px;
+    padding: 0px 15px;
+    background: transparent;
+    outline: none;
+    color: #000000;
+    font-family: 'Cantarell', sans-serif;
+    font-size: 0.875em;
+    border: solid 1px #000000;
+    transition: all 0.5s;
+  }
+  #submit {
+    width: 200px;
+    padding: 0px 15px;
+    margin: 10px;
+    color: #FFFFFF;
+    font-family: 'Orbitron', sans-serif;
+    outline:none;
+    cursor: pointer;
+    border: solid 1px #000000;
+    background: #000000;
+  }
+  #submit:hover {
+    background: #CF4647;
+    color: #FFFFFF;
+    border-color: #CF4647;
+  }
+  input::placeholder, textarea::placeholder {
+    color: #929292;
+    font-size: 0.875em;
+  }
+  input:focus, textarea:focus{
+    border-color: #CF4647;
+  } 
+  /*contact form*/
+
+.inform {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: 'Inconsolata', monospace;
+}
+
+.inform div {
+  display: flex;
+  justify-content: center;
+}
+.contactsSocial {
+  align-items: center;
+}
+.contactsSocial a {
+margin: 0 2px 0 0;
+padding: 0;
+font-size: 0.8em;
+color: #CF4647;
+}
+.contactsSocial div {
+  width: auto;
+}
+
+/*WORK*/
+.portfolio ul,
+.portfolio li {
+display: flex;
+flex-wrap: wrap;
+  margin: 10px;
+  padding: 0;
+  list-style-type: none;
+  justify-content: space-around;
+}
+.portfolio li {
+position: relative;
+width: 400px;
+overflow: hidden;
+}
+
+.portfolio img {
+min-width: 100%;
+}
+.descr {
+  font-family: 'Inconsolata', monospace;
+  padding-top: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: all .7s;
+  transform: scale(0);
+}
+.portfolio li:hover .descr {
+  opacity: 1;
+  transform: scale(1);
+}
+.descr p {
+
+  font-size: 1.3rem;
+  padding-top: 20px;
+}
+.toSite {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.toSite:hover {
+color: #CF4647;
+border-color: #CF4647;
+}
+footer{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+}
+.al {
+  margin-right: 15px;
+  display: block;
+}
+footer img{
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+footer .github, .in, .fb, .resume{
+  position: relative;
+}
+  .tooltip {
+    width: auto;
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+    padding: 7px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 100%;
+    left: 25%;
+    z-index: 1;
+    transition: opacity .5s;
+    opacity: 0;
+  }
+  .github:hover .tooltip, .fb:hover .tooltip, .in:hover .tooltip, .resume:hover .tooltip {
+    opacity: 1;
+  }
+  @media screen and (max-width: 630px) {
+    .al, .sea {
+      display: none;
+    }
+    .aboutText p {
+      font-size: 1.3rem;
+    }
+    #form {
+      width: 350px;
+    }
+  }
