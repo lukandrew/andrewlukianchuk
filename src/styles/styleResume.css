@@ -3,8 +3,6 @@
 /*font-family: 'Merriweather', serif;
 font-family: 'Open Sans', sans-serif;*/
 body {
-  display: flex;
-  flex-wrap: wrap;
   margin: 10px 50px;
   padding: 15;
   height: auto;
@@ -12,9 +10,56 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9rem;
 }
+.resume {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+.resume a i {
+  color: #000;
+  margin-left: 15px;
+  transition: 0.3s ease-in-out;
+}
 p {
   text-align: justify;
   /*line-height: 1.2rem;*/
+}
+.wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/*#headMain {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}*/
+.fline {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 #headMain h1 {
   font-family: 'Merriweather', serif;
@@ -72,3 +117,30 @@ h5 {
 #exp p {
   line-height: 1.4rem;
 }
+.resume {
+  position: relative;
+}
+.resume:hover i {
+  color: #CF4647;
+}
+/*.resume img {
+  margin: 15px;
+  padding-top: 6px;
+  width: 30px;
+  height: 30px;
+}
+  .tooltip {
+    width: auto;
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+    padding: 7px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    position: absolute;
+    left: 120%;
+    bottom: 25%;
+    z-index: 1;
+    transition: opacity .5s;
+    opacity: 0;
+  }*/

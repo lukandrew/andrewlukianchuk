@@ -29,12 +29,26 @@ $('.content').css('height', ch);
 });
 
 $(document).ready(function(){
+  if (screen.width > 630) {
   $('.mainMenu a').on('click', function(){
     count += 1;
     if (count < 2) {
       $('.fullscreen')[0].play();
     }
   });
+} else {
+  $('.mainMenu a').on('click', function(){
+    $('.content').css({
+    'background': 'hsla(0,0%,100%,.5)'
+  }).fadeTo(2000, 1);
+  });
+}
+
+$('video').bind('ended', function(){
+  $('.content').css({
+    'background': 'hsla(0,0%,100%,.5)'
+  }).fadeTo(2000, 1);
+});
 
   $('form').submit(function(){
     var th = $(this);
@@ -51,20 +65,59 @@ $(document).ready(function(){
     return false;
   });
 
-  $('.portfolio .luks').hover(
-  	function(){
-  		$(this).css('flex-grow', 2);
-  	}, function(){
-  		$(this).css('flex-grow', 0);
-  	});
-
-
 });
 
-$('video').bind('ended', function(){
-  $('.content').css({
-    'background': 'hsla(0,0%,100%,.5)'
-  }).fadeTo(2000, 1);
-});
+// document.body.onload = function () {
+
+
+var
+  preloader    = document.getElementById('pagePreloader'),
+  video        = document.getElementById('thevideo'),
+  perc_display = document.getElementById('loadingStatus'),
+  loaded       = 0;
+
+
+  video.oncanplay = function() {
+
+    // video.load();
+    loaded = ( ( (video.buffered.end(0) / video.duration) * 100 ) <<0 );
+
+    // console.log(loaded);
+    // console.log(video.buffered.end(0));
+    // console.log(video.seekable.end(0));
+    perc_display.innerHTML = loaded + '%';
+
+   if ( loaded == 100 ) {
+      setTimeout(function(){
+        if ( !preloader.classList.contains('done') ) {
+          preloader.classList.add('done');
+        }
+      }, 1000);
+    } else {
+
+      setInterval(function(){
+          if (loaded == 100) {
+            perc_display.innerHTML = loaded + '%';
+            clearInterval(this);
+            setTimeout(function(){
+                if ( !preloader.classList.contains('done') ) {
+                preloader.classList.add('done');
+                }
+              }, 1000);
+          }
+          else {
+            perc_display.innerHTML = loaded++ + '%';
+          }
+      }, 50);
+          
+        }
+
+      }
+        
+  // };
+
+  
+// video.addEventListener('loadedmetadata', video_loaded());
+
 
 

@@ -51,7 +51,56 @@ const About = () => (
       <p>Now I live in Seattle and open to new opportunities in the career of web developers.
       </p>
     </div>
-    <img className="sea" src="/images/11.gif" alt="Alt" />
+
+    <div className="skills">
+      <div className="header">
+        <p>
+          SCRIPTING AND PROGRAMMING LANGUAGES
+        </p>
+      </div>
+      <div className="line"></div>
+
+      <div className="skillsName">
+        <p>HTML</p>
+        <div className="skillsLevel">
+          <div className="htmlLevel animateHtml">
+            <p className="level">PROFICIENT</p>
+          </div>
+        </div>
+      </div>
+      <div className="skillsName">
+        <p>CSS</p>
+        <div className="skillsLevel">
+          <div className="cssLevel animateCss">
+            <p className="level">FAMILIAR</p>
+          </div>
+        </div>
+      </div>
+      <div className="skillsName">
+        <p>JavaScript</p>
+        <div className="skillsLevel">
+          <div className="jsLevel animateJs">
+            <p className="level">FAMILIAR</p>
+          </div>
+        </div>
+      </div>
+      <div className="skillsName">
+        <p>JQuery</p>
+        <div className="skillsLevel">
+          <div className="jqLevel animateJq">
+            <p className="level">FAMILIAR</p>
+          </div>
+        </div>
+      </div>
+      <div className="skillsName">
+        <p>React.js</p>
+        <div className="skillsLevel">
+          <div className="reactLevel animateReact">
+            <p className="level">BEGINER</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 )
 
